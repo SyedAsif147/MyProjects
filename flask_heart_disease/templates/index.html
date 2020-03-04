@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment Tutorial 1</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!--    <link rel="stylesheet" href="../static/css/style.css">-->
+  
+</head>
+
+<body style="background: white;">
+ <div class="login">
+	<h1>Heart Disease Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="http://localhost:9000/predict" method="post">
+    	Age: <input type="text" name="Age" placeholder="Age" required="required" /><br>
+    	Sex: <input type="text" name="sex" placeholder="sex" required="required" /><br>
+    	cp: <input type="text" name="cp" placeholder="cp" required="required" /><br>
+    	trestbps: <input type="text" name="trestbps" placeholder="trestbps" required="required" /><br>
+    	chol: <input type="text" name="chol" placeholder="chol" required="required" /><br>
+    	fbs: <input type="text" name="fbs" placeholder="fbs" required="required" /><br>
+    	restecg: <input type="text" name="restecg" placeholder="restecg" required="required" /><br>
+    	thalach: <input type="text" name="thalach" placeholder="thalach" required="required" /><br>
+    	exang: <input type="text" name="exang" placeholder="exang" required="required" /><br>
+    	oldpeak: <input type="text" name="oldpeak" placeholder="oldpeak" required="required" /><br>
+    	slope: <input type="text" name="slope" placeholder="slope" required="required" /><br>
+    	ca: <input type="text" name="ca" placeholder="ca" required="required" /><br>
+    	thal: <input type="text" name="thal" placeholder="thal" required="required" /><br>
+        <button type="submit" class="btn" >Check Result</button>
+        
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+</body>
+</html>
