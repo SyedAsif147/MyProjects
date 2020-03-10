@@ -1,1 +1,4 @@
 log.txt
+
+# ignoring checkpoint files
+.ipynb_checkpoints
