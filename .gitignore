@@ -2,3 +2,6 @@ log.txt
 
 # ignoring checkpoint files
 .ipynb_checkpoints
+
+#ignoring config data file
+database.ini
